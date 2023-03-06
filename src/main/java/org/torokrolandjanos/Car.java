@@ -1,19 +1,7 @@
 package org.torokrolandjanos;
 
-public class Car {
-
-    //instance variables
-    String name;
-    double fuelLevel;
-    double mileage;
-    double totalTraveledDistance;
-    double maxSpeed;
-
+//is a erlationship (Inheritance)
+public class Car extends AutoVehicle{
     int doorCount;
-    boolean damaged;
-    String color;
-
-    //has a relationship (aggregation)
-    Engine engine;
 
 }
