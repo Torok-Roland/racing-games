@@ -59,6 +59,12 @@ public class App {
         double distanceForCar2 = car2.accelerate(100, 1);
 
 
+        Mechanic mechanic = new Mechanic();
+        System.out.println("Engine name before repair: " + carReference.engine.manufacturer);
+        mechanic.repair(carReference);
+        System.out.println("Engine name after repair: " + carReference.engine.manufacturer);
+
+
        /* System.out.println("Initial name of care 1: " + carReference.name);
         carReference.name = "Audi";
         System.out.println("Changed name for car 1: " + carReference.name);
