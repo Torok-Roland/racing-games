@@ -46,10 +46,20 @@ public class App {
         car2.engine.capacity = 2000;
 
         System.out.println("Properties of car: " + car2.name);
+        System.out.println("Max speed: " + car2.maxSpeed);
         System.out.println("Fuel level: " + car2.fuelLevel);
+        System.out.println("Mileage: " + car2.mileage);
         System.out.println("Total traveled distance: " + car2.totalTraveledDistance);
+        System.out.println("Damaged: " + car2.damaged);
+        System.out.println("Door Count: " + car2.doorCount);
+        System.out.println("Color: " + car2.color);
 
-        System.out.println("Initial name of care 1: " + carReference.name);
+        double distanceForCar1 = carReference.accelerate(60, 1);
+
+        double distanceForCar2 = car2.accelerate(100, 1);
+
+
+       /* System.out.println("Initial name of care 1: " + carReference.name);
         carReference.name = "Audi";
         System.out.println("Changed name for car 1: " + carReference.name);
 
@@ -66,7 +76,7 @@ public class App {
         System.out.println("Updated name of car referenced from 2 variables. Car2: " + car2.name);
 
         car2 = null;
-        System.out.println(carReference.name);
+        System.out.println(carReference.name);*/
 
 
 
