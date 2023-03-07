@@ -6,6 +6,19 @@ public class App {
         Game game = new Game();
         game.start();
 
+      /*  Vehicle vehicle1 = new Vehicle();
+        vehicle1.name = "Dacia";
+*/
+    //    vehicle1.totalVehicleCount = 1;
+
+      /*  Vehicle vehicle2 = new Vehicle();
+        vehicle2.name = "Lada";*/
+     //   vehicle2.totalVehicleCount = 2;
+/*
+        System.out.println("Total count from vehicle " + vehicle1.name + ": " + vehicle1.totalVehicleCount);
+        System.out.println("Total count from vehicle " + vehicle2.name + ": " + vehicle2.totalVehicleCount);
+        System.out.println("Total count from Vehicle class: " + Vehicle.totalVehicleCount);*/
+
        /* System.out.println("Hello World!");
 
         Engine autovehicleEngine = new Engine();
