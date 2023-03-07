@@ -1,4 +1,4 @@
-package org.torokrolandjanos;
+package org.torokrolandjanos.vehicles;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -12,7 +12,7 @@ public class Vehicle {
     private String name;
     private double fuelLevel;
     private double mileage;
-    private double totalTraveledDistance;
+    protected double totalTraveledDistance;
     private double maxSpeed;
 
     private boolean damaged;

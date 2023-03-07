@@ -1,4 +1,6 @@
-package org.torokrolandjanos;
+package org.torokrolandjanos.vehicles;
+
+import org.torokrolandjanos.Engine;
 
 public class AutoVehicle extends Vehicle {
     //has a relationship (aggregation)

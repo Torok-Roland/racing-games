@@ -1,4 +1,6 @@
-package org.torokrolandjanos;
+package org.torokrolandjanos.vehicles;
+
+import org.torokrolandjanos.Engine;
 
 //is a erlationship (Inheritance)
 public class Car extends AutoVehicle {
