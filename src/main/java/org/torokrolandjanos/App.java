@@ -3,8 +3,10 @@ package org.torokrolandjanos;
 
 public class App {
     public static void main(String[] args) {
+        Game game = new Game();
+        game.start();
 
-        System.out.println("Hello World!");
+       /* System.out.println("Hello World!");
 
         Engine autovehicleEngine = new Engine();
         autovehicleEngine.manufacturer = "VW";
@@ -78,7 +80,7 @@ public class App {
         System.out.println("Engine name after repair: " + carReference.engine.manufacturer);
 
 
-       /* System.out.println("Initial name of care 1: " + carReference.name);
+       *//* System.out.println("Initial name of care 1: " + carReference.name);
         carReference.name = "Audi";
         System.out.println("Changed name for car 1: " + carReference.name);
 
@@ -95,7 +97,7 @@ public class App {
         System.out.println("Updated name of car referenced from 2 variables. Car2: " + car2.name);
 
         car2 = null;
-        System.out.println(carReference.name);*/
-
+        System.out.println(carReference.name);*//*
+*/
     }
 }
