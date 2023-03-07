@@ -1,5 +1,8 @@
 package org.torokrolandjanos;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class Vehicle {
 
     //class variable (static variable)
@@ -13,6 +16,8 @@ public class Vehicle {
     double maxSpeed;
     boolean damaged;
     String color;
+
+    LocalDate manufacturingDate = LocalDate.now();
 
     public Vehicle() {
         totalVehicleCount++;
