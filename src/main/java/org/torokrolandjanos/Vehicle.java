@@ -6,18 +6,19 @@ import java.time.LocalDateTime;
 public class Vehicle {
 
     //class variable (static variable)
-    static int totalVehicleCount;
+    private static int totalVehicleCount;
 
     //instance variables
-    String name;
-    double fuelLevel;
-    double mileage;
-    double totalTraveledDistance;
-    double maxSpeed;
-    boolean damaged;
-    String color;
+    private String name;
+    private double fuelLevel;
+    private double mileage;
+    private double totalTraveledDistance;
+    private double maxSpeed;
 
-    LocalDate manufacturingDate = LocalDate.now();
+    private boolean damaged;
+    private String color;
+
+    private LocalDate manufacturingDate = LocalDate.now();
 
     public Vehicle() {
         totalVehicleCount++;
@@ -59,5 +60,74 @@ public class Vehicle {
         System.out.println("Remaining fuel for vehicle " + name + ": " + fuelLevel);
 
         return distance;
+    }
+
+    public void setName(String name) {
+        this.name = name.trim();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getFuelLevel() {
+        return fuelLevel;
+    }
+
+    public void setFuelLevel(double fuelLevel) {
+        this.fuelLevel = fuelLevel;
+    }
+
+    public double getMileage() {
+        return mileage;
+    }
+
+    public void setMileage(double mileage) {
+        this.mileage = mileage;
+    }
+
+    public double getTotalTraveledDistance() {
+        return totalTraveledDistance;
+    }
+
+    public void setTotalTraveledDistance(double totalTraveledDistance) {
+        this.totalTraveledDistance = totalTraveledDistance;
+    }
+
+    public double getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(double maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public boolean isDamaged() {
+        return damaged;
+    }
+
+    public void setDamaged(boolean damaged) {
+        this.damaged = damaged;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public LocalDate getManufacturingDate() {
+        return manufacturingDate;
+    }
+
+    public void setManufacturingDate(LocalDate manufacturingDate) {
+        this.manufacturingDate = manufacturingDate;
+    }
+
+    // read only property
+    public static int getTotalVehicleCount() {
+        return totalVehicleCount;
     }
 }
