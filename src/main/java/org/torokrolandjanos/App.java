@@ -8,20 +8,20 @@ import org.torokrolandjanos.vehicles.cheater.CheatingVehicle;
 
 public class App {
     public static void main(String[] args) {
-        //Game game = new Game();
-        //game.start();
-
-        Vehicle cheatingVehicle = new CheatingVehicle();
-        cheatingVehicle.setName("Cheater");
-
-//        cheatingVehicle.accelerate(60,1);
-
-        // object type determines method implementation
-        // variable type determines what methods can be invoked directly
-        //type casting
-       if (cheatingVehicle instanceof CheatingVehicle){
-           ((CheatingVehicle) cheatingVehicle).cheat();
-       }
+        Game game = new Game();
+        game.start();
+//
+//        Vehicle cheatingVehicle = new CheatingVehicle();
+//        cheatingVehicle.setName("Cheater");
+//
+////        cheatingVehicle.accelerate(60,1);
+//
+//        // object type determines method implementation
+//        // variable type determines what methods can be invoked directly
+//        //type casting
+//       if (cheatingVehicle instanceof CheatingVehicle){
+//           ((CheatingVehicle) cheatingVehicle).cheat();
+//       }
 
 
 //        Engine engine = new Engine();
