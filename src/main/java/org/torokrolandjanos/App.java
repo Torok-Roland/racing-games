@@ -3,6 +3,7 @@ package org.torokrolandjanos;
 
 import org.torokrolandjanos.vehicles.AutoVehicle;
 import org.torokrolandjanos.vehicles.Car;
+import org.torokrolandjanos.vehicles.Vehicle;
 import org.torokrolandjanos.vehicles.cheater.CheatingVehicle;
 
 public class App {
@@ -10,12 +11,18 @@ public class App {
         //Game game = new Game();
         //game.start();
 
-        CheatingVehicle cheatingVehicle = new CheatingVehicle();
+        Vehicle cheatingVehicle = new CheatingVehicle();
         cheatingVehicle.setName("Cheater");
 
 //        cheatingVehicle.accelerate(60,1);
 
-        cheatingVehicle.accelerate(60);
+        // object type determines method implementation
+        // variable type determines what methods can be invoked directly
+        //type casting
+       if (cheatingVehicle instanceof CheatingVehicle){
+           ((CheatingVehicle) cheatingVehicle).cheat();
+       }
+
 
 //        Engine engine = new Engine();
 //        engine.setManufacturer("Renault");

@@ -1,10 +1,10 @@
 package org.torokrolandjanos;
 
 import org.torokrolandjanos.utils.ScannerUtils;
+import org.torokrolandjanos.vehicles.Vehicle;
 
 
 public class Game {
-
 
     public void start(){
         System.out.println("Welcome to the Racing Game!");
@@ -28,4 +28,5 @@ public class Game {
         System.out.println("Please enter vehicle name: ");
         return ScannerUtils.nextLine();
     }
+
 }
