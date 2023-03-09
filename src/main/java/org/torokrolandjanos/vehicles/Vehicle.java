@@ -67,6 +67,13 @@ public class Vehicle {
         return distance;
     }
 
+    protected Vehicle reset(){
+        totalTraveledDistance = 0;
+        damaged = false;
+        return this;
+    }
+
+
     public void setName(String name) {
         this.name = name.trim();
     }
@@ -135,4 +142,20 @@ public class Vehicle {
     public static int getTotalVehicleCount() {
         return totalVehicleCount;
     }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                ", fuelLevel=" + fuelLevel +
+                ", mileage=" + mileage +
+                ", totalTraveledDistance=" + totalTraveledDistance +
+                ", maxSpeed=" + maxSpeed +
+                ", damaged=" + damaged +
+                ", color='" + color + '\'' +
+                ", manufacturingDate=" + manufacturingDate +
+                '}';
+    }
+
+
 }
