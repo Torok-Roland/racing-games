@@ -6,10 +6,29 @@ import org.torokrolandjanos.vehicles.Car;
 import org.torokrolandjanos.vehicles.Vehicle;
 import org.torokrolandjanos.vehicles.cheater.CheatingVehicle;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class App {
     public static void main(String[] args) {
        Game game = new Game();
        game.start();
+
+//        List<String> favoriteAuthors = new ArrayList<>();
+//        favoriteAuthors.add("Tolkien");
+//        favoriteAuthors.add("C.S.Lewis");
+//        favoriteAuthors.add("Tolstoi");
+//        favoriteAuthors.add("Marquez");
+//
+//        System.out.println(favoriteAuthors);
+//
+//        boolean tolkienFavorite = favoriteAuthors.contains("Tolkien");
+//        System.out.println(tolkienFavorite);
+//
+//        int[] integers = {1,2,3,4};
+//
+//        List<Integer> integerList = Arrays.asList(10,20,30);
 
 //    String email = "torokroland1998@gmail.org";
 //        String[] emailParts = email.split("@");
