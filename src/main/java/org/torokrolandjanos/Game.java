@@ -1,6 +1,7 @@
 package org.torokrolandjanos;
 
 import org.torokrolandjanos.utils.ScannerUtils;
+import org.torokrolandjanos.vehicles.Car;
 import org.torokrolandjanos.vehicles.Vehicle;
 
 import java.util.ArrayList;
@@ -70,9 +71,9 @@ public class Game {
     private void initializeCompetitors() {
         int playerCount = getPlayerCountFromUser();
 
-        for (int i = 1; i < playerCount; i++) {
+        for (int i = 1; i <= playerCount; i++) {
             System.out.println("Preparing player " + i + " for the race. ");
-            Vehicle vehicle = new Vehicle();
+            Vehicle vehicle = new Car();
             vehicle.setName(getVehicleNameFromUser());
             vehicle.setFuelLevel(30);
             vehicle.setMaxSpeed(300);

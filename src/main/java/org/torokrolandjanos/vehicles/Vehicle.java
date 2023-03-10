@@ -3,7 +3,7 @@ package org.torokrolandjanos.vehicles;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class Vehicle {
+public abstract class Vehicle {
 
     //class variable (static variable)
     private static int totalVehicleCount;
@@ -25,7 +25,7 @@ public class Vehicle {
     }
 
     //method overloading
-    public double accelerate(double speed){
+    public double accelerate(double speed) {
         return accelerate(speed, 1);
     }
 
@@ -67,7 +67,7 @@ public class Vehicle {
         return distance;
     }
 
-    protected Vehicle reset(){
+    protected Vehicle reset() {
         totalTraveledDistance = 0;
         damaged = false;
         return this;

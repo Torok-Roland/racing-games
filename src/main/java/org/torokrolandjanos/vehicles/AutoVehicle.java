@@ -2,7 +2,7 @@ package org.torokrolandjanos.vehicles;
 
 import org.torokrolandjanos.Engine;
 
-public class AutoVehicle extends Vehicle {
+public abstract class AutoVehicle extends Vehicle {
     //has a relationship (aggregation)
     private Engine engine;
 
