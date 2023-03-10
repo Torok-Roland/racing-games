@@ -13,6 +13,9 @@ public class Game {
 
         initializeTracks();
 
+        Track selectedTrack = getSelectedTrackFromUser();
+        System.out.println("Selected track: " + selectedTrack.getName());
+
         int playerCount = getPlayerCountFromUser();
 
         System.out.println("Player count: " + playerCount);
@@ -40,6 +43,7 @@ public class Game {
     }
 // classic for
     private void displayTracks() {
+        System.out.println("Available tracks: ");
         for (int i = 0; i < tracks.length; i++) {
             if (tracks[i] != null){
                 System.out.println((i + 1) + ". " + tracks[i].getName() + " : " + tracks[i].getLength());
@@ -56,6 +60,14 @@ public class Game {
     private String getVehicleNameFromUser() {
         System.out.println("Please enter vehicle name: ");
         return ScannerUtils.nextLine();
+    }
+
+    private Track getSelectedTrackFromUser(){
+        System.out.println("PLease select a track: ");
+        int trackNumber = ScannerUtils.nextIntAndMoveToNextLine();
+
+        return tracks[trackNumber - 1];
+
     }
 
 }
