@@ -1,7 +1,6 @@
-package org.torokrolandjanos.vehicles;
+package org.torokrolandjanos.competitor.vehicle;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public abstract class Vehicle {
 

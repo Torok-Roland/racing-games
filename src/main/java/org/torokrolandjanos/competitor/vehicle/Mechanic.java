@@ -1,6 +1,4 @@
-package org.torokrolandjanos;
-
-import org.torokrolandjanos.vehicles.AutoVehicle;
+package org.torokrolandjanos.competitor.vehicle;
 
 public class Mechanic {
     public void repair(AutoVehicle autoVehicle){

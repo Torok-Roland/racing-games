@@ -1,8 +1,8 @@
 package org.torokrolandjanos;
 
 import org.torokrolandjanos.utils.ScannerUtils;
-import org.torokrolandjanos.vehicles.Car;
-import org.torokrolandjanos.vehicles.Vehicle;
+import org.torokrolandjanos.competitor.vehicle.Car;
+import org.torokrolandjanos.competitor.vehicle.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,8 @@ public class Game {
 
     private Track[] tracks = new Track[3];
     private List<Vehicle> competitors = new ArrayList<>();
+
+
 
     public void start() {
         System.out.println("Welcome to the Racing Game!");
