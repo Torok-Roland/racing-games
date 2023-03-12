@@ -1,9 +1,9 @@
 package org.torokrolandjanos;
 
 import org.torokrolandjanos.competitor.Mobile;
-import org.torokrolandjanos.utils.ScannerUtils;
 import org.torokrolandjanos.competitor.vehicle.Car;
 import org.torokrolandjanos.competitor.vehicle.Vehicle;
+import org.torokrolandjanos.utils.ScannerUtils;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -139,7 +139,13 @@ public class Game {
 
     private double getAccelerationSpeedFromUser() {
         System.out.println("Please enter acceleration speed: ");
-        return ScannerUtils.nextDoubleAndMoveToNextLIne();
-    }
 
+        try {
+            return ScannerUtils.nextDoubleAndMoveToNextLIne();
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid value please try again");
+            // recursion
+            return getAccelerationSpeedFromUser();
+        }
+    }
 }

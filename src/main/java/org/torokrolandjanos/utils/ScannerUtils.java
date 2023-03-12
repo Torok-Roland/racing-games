@@ -7,14 +7,19 @@ public class ScannerUtils {
     private static final Scanner SCANNER = new Scanner(System.in);
 
     public static int nextIntAndMoveToNextLine() {
-        int integer = SCANNER.nextInt();
-        SCANNER.nextLine();
-        return integer;
+        try {
+            return SCANNER.nextInt();
+        } finally {
+            SCANNER.nextLine();
+        }
     }
-    public static double nextDoubleAndMoveToNextLIne(){
-        double value = SCANNER.nextDouble();
-        SCANNER.nextLine();
-        return value;
+
+    public static double nextDoubleAndMoveToNextLIne() {
+        try {
+            return SCANNER.nextDouble();
+        } finally {
+            SCANNER.nextLine();
+        }
     }
 
     public static String nextLine() {
