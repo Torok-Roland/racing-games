@@ -9,4 +9,6 @@ public interface UserInputController {
     int getSelectedTrack();
 
     double getAccelerationSpeed();
+
+    int getCompetitorType();
 }
