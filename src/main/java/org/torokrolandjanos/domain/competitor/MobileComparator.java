@@ -1,4 +1,4 @@
-package org.torokrolandjanos.competitor;
+package org.torokrolandjanos.domain.competitor;
 
 import java.util.Comparator;
 

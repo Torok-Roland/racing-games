@@ -1,6 +1,6 @@
-package org.torokrolandjanos.competitor.vehicle;
+package org.torokrolandjanos.domain.competitor.vehicle;
 
-import org.torokrolandjanos.competitor.Mobile;
+import org.torokrolandjanos.domain.competitor.Mobile;
 
 import java.time.LocalDate;
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package org.torokrolandjanos.competitor.vehicle;
+package org.torokrolandjanos.domain.competitor.vehicle;
 
 public class Engine {
 

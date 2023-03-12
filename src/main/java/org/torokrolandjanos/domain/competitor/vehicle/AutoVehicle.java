@@ -1,4 +1,4 @@
-package org.torokrolandjanos.competitor.vehicle;
+package org.torokrolandjanos.domain.competitor.vehicle;
 
 public abstract class AutoVehicle extends Vehicle {
     //has a relationship (aggregation)

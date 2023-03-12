@@ -1,4 +1,4 @@
-package org.torokrolandjanos.competitor.vehicle;
+package org.torokrolandjanos.domain.competitor.vehicle;
 
 //is a erlationship (Inheritance)
 public class Car extends AutoVehicle {

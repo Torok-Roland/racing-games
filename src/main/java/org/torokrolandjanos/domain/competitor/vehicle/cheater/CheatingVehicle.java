@@ -1,6 +1,6 @@
-package org.torokrolandjanos.competitor.vehicle.cheater;
+package org.torokrolandjanos.domain.competitor.vehicle.cheater;
 
-import org.torokrolandjanos.competitor.vehicle.Vehicle;
+import org.torokrolandjanos.domain.competitor.vehicle.Vehicle;
 
 public class CheatingVehicle extends Vehicle {
 

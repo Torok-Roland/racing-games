@@ -1,12 +1,15 @@
-package org.torokrolandjanos;
+package org.torokrolandjanos.service;
 
-import org.torokrolandjanos.competitor.Mobile;
-import org.torokrolandjanos.competitor.MobileComparator;
-import org.torokrolandjanos.competitor.vehicle.Car;
-import org.torokrolandjanos.competitor.vehicle.Vehicle;
+import org.torokrolandjanos.controller.StdinController;
+import org.torokrolandjanos.controller.UserInputController;
+import org.torokrolandjanos.domain.Track;
+import org.torokrolandjanos.domain.competitor.Mobile;
+import org.torokrolandjanos.domain.competitor.MobileComparator;
+import org.torokrolandjanos.domain.competitor.vehicle.Car;
+import org.torokrolandjanos.domain.competitor.vehicle.Vehicle;
 import org.torokrolandjanos.persistence.FileRankingRepository;
 import org.torokrolandjanos.persistence.RankingsRepository;
-import org.torokrolandjanos.utils.ScannerUtils;
+import org.torokrolandjanos.controller.utils.ScannerUtils;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -19,6 +22,8 @@ public class Game {
     private Set<Mobile> outOfRaceCompetitors = new HashSet<>();
     private boolean winnerNotKnown = true;
     private Track selectedTrack;
+
+    private UserInputController userInputController = new StdinController();
     private RankingsRepository rankingsRepository = new FileRankingRepository();
 
     public void start() throws Exception {
@@ -37,16 +42,16 @@ public class Game {
         processRankings();
     }
 
-    private void processRankings(){
+    private void processRankings() {
         competitors.sort(Collections.reverseOrder(new MobileComparator()));
 
         System.out.println("Rankings: ");
 
-        for(int i = 0; i < competitors.size(); i++){
-            System.out.println((i+1) + ". " + competitors.get(i).getName() + " : "
+        for (int i = 0; i < competitors.size(); i++) {
+            System.out.println((i + 1) + ". " + competitors.get(i).getName() + " : "
                     + competitors.get(i).getTotalTraveledDistance() + " km.");
 
-        rankingsRepository.addRankingItem(i+1, competitors.get(i).getName(), competitors.get(i).getTotalTraveledDistance());
+            rankingsRepository.addRankingItem(i + 1, competitors.get(i).getName(), competitors.get(i).getTotalTraveledDistance());
         }
 
         rankingsRepository.close();
@@ -110,12 +115,12 @@ public class Game {
     }
 
     private void initializeCompetitors() {
-        int playerCount = getPlayerCountFromUser();
+        int playerCount = userInputController.getPlayerCount();
 
         for (int i = 1; i <= playerCount; i++) {
             System.out.println("Preparing player " + i + " for the race. ");
             Vehicle vehicle = new Car();
-            vehicle.setName(getVehicleNameFromUser());
+            vehicle.setName(userInputController.getVehicleName());
             vehicle.setFuelLevel(30);
             vehicle.setMaxSpeed(300);
             vehicle.setMileage(ThreadLocalRandom.current().nextDouble(8, 15));
@@ -129,23 +134,9 @@ public class Game {
         }
     }
 
-
-    private int getPlayerCountFromUser() {
-        System.out.println("Please enter number of players: ");
-        return ScannerUtils.nextIntAndMoveToNextLine();
-
-    }
-
-    private String getVehicleNameFromUser() {
-        System.out.println("Please enter vehicle name: ");
-        return ScannerUtils.nextLine();
-    }
-
     private Track getSelectedTrackFromUser() throws Exception {
-        System.out.println("PLease select a track: ");
-
         try {
-            int trackNumber = ScannerUtils.nextIntAndMoveToNextLine();
+            int trackNumber = userInputController.getSelectedTrack();
             return tracks[trackNumber - 1];
 
         } catch (InputMismatchException e) {
@@ -158,10 +149,9 @@ public class Game {
     }
 
     private double getAccelerationSpeedFromUser() {
-        System.out.println("Please enter acceleration speed: ");
 
         try {
-            return ScannerUtils.nextDoubleAndMoveToNextLIne();
+            return userInputController.getAccelerationSpeed();
         } catch (InputMismatchException e) {
             System.out.println("Invalid value please try again");
             // recursion

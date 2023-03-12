@@ -1,4 +1,4 @@
-package org.torokrolandjanos;
+package org.torokrolandjanos.domain;
 
 public class Track {
 

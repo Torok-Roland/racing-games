@@ -1,4 +1,4 @@
-package org.torokrolandjanos.utils;
+package org.torokrolandjanos.controller.utils;
 
 import java.util.Scanner;
 

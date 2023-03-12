@@ -1,7 +1,6 @@
 package org.torokrolandjanos;
 
-import org.torokrolandjanos.competitor.vehicle.Car;
-import org.torokrolandjanos.competitor.vehicle.Engine;
+import org.torokrolandjanos.service.Game;
 
 public class App {
     public static void main(String[] args) throws Exception {
