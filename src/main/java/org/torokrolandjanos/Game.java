@@ -1,6 +1,7 @@
 package org.torokrolandjanos;
 
 import org.torokrolandjanos.competitor.Mobile;
+import org.torokrolandjanos.competitor.MobileComparator;
 import org.torokrolandjanos.competitor.vehicle.Car;
 import org.torokrolandjanos.competitor.vehicle.Vehicle;
 import org.torokrolandjanos.utils.ScannerUtils;
@@ -30,6 +31,19 @@ public class Game {
         initializeCompetitors();
 
         loopRounds();
+
+        processRankings();
+    }
+
+    private void processRankings(){
+        competitors.sort(Collections.reverseOrder(new MobileComparator()));
+
+        System.out.println("Rankings: ");
+
+        for(int i = 0; i < competitors.size(); i++){
+            System.out.println((i+1) + ". " + competitors.get(i).getName() + " : "
+                    + competitors.get(i).getTotalTraveledDistance() + " km.");
+        }
     }
 
     private void loopRounds() {
