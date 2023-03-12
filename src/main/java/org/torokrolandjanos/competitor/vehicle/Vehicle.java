@@ -3,6 +3,7 @@ package org.torokrolandjanos.competitor.vehicle;
 import org.torokrolandjanos.competitor.Mobile;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public abstract class Vehicle implements Mobile {
 
@@ -163,5 +164,21 @@ public abstract class Vehicle implements Mobile {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vehicle vehicle = (Vehicle) o;
+        return Double.compare(vehicle.fuelLevel, fuelLevel) == 0 &&
+                Double.compare(vehicle.mileage, mileage) == 0 &&
+                Double.compare(vehicle.totalTraveledDistance, totalTraveledDistance) == 0 &&
+                Double.compare(vehicle.maxSpeed, maxSpeed) == 0 && damaged == vehicle.damaged && Objects.equals(name, vehicle.name) &&
+                Objects.equals(color, vehicle.color) &&
+                Objects.equals(manufacturingDate, vehicle.manufacturingDate);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, fuelLevel, mileage, totalTraveledDistance, maxSpeed, damaged, color, manufacturingDate);
+    }
 }
