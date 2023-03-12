@@ -4,6 +4,8 @@ import org.torokrolandjanos.competitor.Mobile;
 import org.torokrolandjanos.competitor.MobileComparator;
 import org.torokrolandjanos.competitor.vehicle.Car;
 import org.torokrolandjanos.competitor.vehicle.Vehicle;
+import org.torokrolandjanos.persistence.FileRankingRepository;
+import org.torokrolandjanos.persistence.RankingsRepository;
 import org.torokrolandjanos.utils.ScannerUtils;
 
 import java.util.*;
@@ -17,7 +19,7 @@ public class Game {
     private Set<Mobile> outOfRaceCompetitors = new HashSet<>();
     private boolean winnerNotKnown = true;
     private Track selectedTrack;
-
+    private RankingsRepository rankingsRepository = new FileRankingRepository();
 
     public void start() throws Exception {
         System.out.println("Welcome to the Racing Game!");
@@ -43,7 +45,11 @@ public class Game {
         for(int i = 0; i < competitors.size(); i++){
             System.out.println((i+1) + ". " + competitors.get(i).getName() + " : "
                     + competitors.get(i).getTotalTraveledDistance() + " km.");
+
+        rankingsRepository.addRankingItem(i+1, competitors.get(i).getName(), competitors.get(i).getTotalTraveledDistance());
         }
+
+        rankingsRepository.close();
     }
 
     private void loopRounds() {
