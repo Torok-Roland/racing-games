@@ -48,7 +48,7 @@ public abstract class Vehicle implements Mobile {
         } else if (speed == maxSpeed) {
             System.out.println("Careful, max speed reached");
         } else {
-            System.out.println("Valid speed entered.");
+            //System.out.println("Valid speed entered.");
         }
 
 
@@ -70,6 +70,7 @@ public abstract class Vehicle implements Mobile {
         fuelLevel -= useFuel;
 
         System.out.println("Remaining fuel for vehicle " + name + ": " + fuelLevel);
+        System.out.println();
 
         return distance;
     }
